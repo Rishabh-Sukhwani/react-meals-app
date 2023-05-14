@@ -1,6 +1,6 @@
 <h1 align="center">react-meals-app</h1>
 
-A website build using react to view different meals, their recipes and save them!
+A website built using react to view different meals, their recipes and save them!
 
 ---
 
