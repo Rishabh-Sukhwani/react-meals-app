@@ -302,3 +302,34 @@ ul {
   background: var(--white);
   border-radius: var(--borderRadius);
 }
+
+.modal-img {
+  height: 15rem;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+}
+
+.modal-content {
+  padding: 1rem 1.5rem;
+}
+
+.modal-content p {
+  color: var(--grey-600);
+}
+
+.modal-content a {
+  display: block;
+  color: var(--primary-500);
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.modal-content a:hover {
+  color: var(--black);
+}
+
+.close-btn {
+  background: var(--red-dark);
+  color: var(--white);
+}
