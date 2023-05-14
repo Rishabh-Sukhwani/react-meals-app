@@ -166,3 +166,70 @@ ul {
 /* End of Global Styles */
 
 
+/*Meals*/
+.section-center {
+  padding: 3rem 0;
+  padding-left: 3rem;
+  width: var(--view-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 776px) {
+  .section-center {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media  screen and (min-width: 992px) {
+  .section-center {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.single-meal {
+  background: var(--white);
+  color: var(--textColor);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+}
+
+.single-meal:hover {
+  box-shadow: var(--shadow-4);
+}
+
+.single-meal img {
+  height: 15rem;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+  cursor: pointer;
+}
+
+.single-meal h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.single-meal footer {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.like-btn {
+  background: transparent;
+  border: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.like-btn:hover {
+  color: var(--red-dark);
+  transform: translateY(-2px);
+}
