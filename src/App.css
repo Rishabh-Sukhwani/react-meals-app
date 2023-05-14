@@ -51,7 +51,7 @@ html {
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
-  --max-width: 1120px;
+  --max-width: 1600px;
   --fixed-width: 600px;
   --view-width: 90vw;
   /* box shadow*/
@@ -167,12 +167,16 @@ ul {
 
 
 /*Meals*/
-.section-center {
+.section, .section-center {
   padding: 3rem 0;
-  padding-left: 3rem;
+  padding-left: 9rem;
+  padding-right: 3rem;
   width: var(--view-width);
   max-width: var(--max-width);
   margin: 0 auto;
+}
+
+.section-center {
   display: grid;
   gap: 2rem;
 }
@@ -188,6 +192,8 @@ ul {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+
 
 .single-meal {
   background: var(--white);
