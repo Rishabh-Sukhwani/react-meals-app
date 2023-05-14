@@ -12,10 +12,8 @@ function App() {
         {/* <Meals /> */}
         {/* <Modal /> */}
         {/* <Search /> */}
-        <Favourites />
         <Meals />
-        <Modal />
-        <Search />
+        
     </main>
   )
 }
