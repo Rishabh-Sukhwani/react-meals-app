@@ -31,10 +31,13 @@ const AppProvider = ({ children }) => {
         setLoading(false)
     }
 
-    const selectMeal = (idMeal) => {
+    const selectMeal = (idMeal, favouriteMeal) => {
         let meal;
-        meal = meals.find((meal) => meal.idMeal === idMeal)
-        console.log(meal);
+        if (favouriteMeal) {
+            meal = favourites.find((meal) => meal.idMeal === idMeal)
+        } else {
+            meal = meals.find((meal) => meal.idMeal === idMeal)
+        }
         setSelectedMeal(meal)
         setShowModal(true)
     }
