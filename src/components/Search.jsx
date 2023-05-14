@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useGlobalContext } from "../context";
 
-
 const Search = () => {
 
+    const { setSearchTerm, fetchRandomMeal } = useGlobalContext()
     const [text, setText] = useState()
 
     const handleChange = (e) => {
@@ -12,6 +12,15 @@ const Search = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        if (text) {
+            setSearchTerm(text)
+        }
+    }
+
+    const handleRandomMeal = () => {
+        setSearchTerm('')
+        setText('')
+        fetchRandomMeal()
     }
 
     return (  
@@ -19,7 +28,7 @@ const Search = () => {
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="type favourite meal" value={text} className="form-input" onChange={handleChange}/>
                 <button type="submit" className="btn">search</button>
-                <button type="button" className="btn btn-hipster">surprise me!</button> 
+                <button type="button" className="btn btn-hipster" onClick={handleRandomMeal}>surprise me!</button> 
             </form>
         </header>
     );
