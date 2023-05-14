@@ -6,6 +6,7 @@ import axios from 'axios'
 const allMealsUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 const randomMealUrl = 'https://www.themealdb.com/api/json/v1/1/random.php'
 
+// eslint-disable-next-line react/prop-types
 const AppProvider = ({ children }) => {
 
     const [meals, setMeals] = useState([])
@@ -17,7 +18,11 @@ const AppProvider = ({ children }) => {
         setLoading(true)
         try {
             const {data} = await axios(url)
-            setMeals(data.meals)
+            if (data.meals) {
+                setMeals(data.meals)
+            } else {
+                setMeals([])
+            }
         } catch (e) {
             console.log(e.response)
         }
